@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Flight Finder - Encontre seu voo</title>
+	<script src="js/jquery.js"></script>
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="shortcut icon" href="img/favicon.ico">
+	<!--<link rel="stylesheet" href="css/bootstrap-theme.css">-->
+	<script src="js/bootstrap.js"></script>
+    <link rel="stylesheet" href="css/bootstrap-datepicker.css">
+	<script src="js/bootstrap-datepicker.js"></script>
+	<script src="js/bootstrap-datepicker.pt-BR.js"></script>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body role="document">
+	<nav class="navbar navbar-default navbar-fixed-top">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand logo" href="#">Flight<span class="logo-aviao"> &#x2708; </span>Finder</a>
+			</div>
+			<div id="navbar" class="navbar-collapse collapse">
+				<ul class="nav navbar-nav">
+					<li class="active"><a href="#">Home</a></li>
+					<li><a href="aeroportos.html">Listar aeroportos</a></li>
+					<li><a href="voos.html">Listar vôos</a></li>
+				</ul>
+			</div>
+		</div>
+	</nav> 
+
+	<div class="container" role="main">
+		<span class="titulo"> Flight<span class="titulo-aviao"> &#x2708; </span>Finder </span>
+		<div class="row">
+			<!--<div class="col-xs-12 col-md-6">-->
+			<div class="col-xs-6">
+				<form action="list.html" method="GET" onbeforesubmit="return validar();">
+                    <fieldset>
+						<h2 role="legend">Buscar passagens aéreas</h2>
+
+                        <div class="form-group">
+                            <label class="radio-inline" for="tipo-ida"><input type="radio" name="tipo" id="tipo-ida" value="1">Só ida</label>
+                            <label class="radio-inline" for="tipo-ida-volta"><input type="radio" name="tipo" id="tipo-ida-volta" value="2" checked>Ida e volta</label>    
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="origem">Origem</label>
+                            <input type="text" class="form-control" required placeholder="Origem (Ex: CWB ou Curitiba)" id="origem" data-toggle="popover" data-placement="right" data-html="true" title="">
+                            <input type="hidden" name="origem">
+                            <input type="hidden" name="tipo-origem">
+                        </div>
+                        <div class="form-group">
+                            <label for="destino">Destino</label>
+                            <input type="text" class="form-control" id="destino" placeholder="Destino (Ex: JTC ou Bauru)" data-toggle="popover" data-placement="right" data-html="true" title="">
+                            <input type="hidden" name="destino">
+                            <input type="hidden" name="tipo-destino">
+                        </div>
+                        <div class="form-group">
+                            <label for="datepicker">Datas</label>
+                            <div class="input-daterange input-group" id="datepicker">
+                                <span class="input-group-addon">Saída:</span>
+                                <input type="text" placeholder="dd/mm/yyyy" class="form-control" required name="ida" id="ida" />
+                                <span class="input-group-addon">Chegada:</span>
+                                <input type="text" placeholder="dd/mm/yyyy" class="form-control" name="volta" id="volta"/>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="pessoas">Passageiros</label>
+                            <input type="number" class="form-control" name="pessoas" id="pessoas" min="1" max="8" value="1" required>
+                        </div>
+                        
+                        <button class="btn btn-primary btn-block" type="submit">Buscar</button>
+                    </fieldset>
+                </form>
+			</div>
+			<div class="col-xs-12 col-md-6">
+				<!--<a href="aeroportos.html" class="col-xs-12 btn btn-default opcao" >Listar Aeroportos</a>-->
+			</div>
+		</div>
+	</div>
+
+    <script src="js/index.js"></script>
+    <!--<script>
+        $('#datepicker').datepicker({
+            format: "dd/mm/yyyy",
+            startDate: "-Date()",
+            maxViewMode: 0,
+            todayBtn: "linked",
+            language: "pt-BR",
+            keyboardNavigation: false,
+            autoclose: true
+        });
+        
+        var xmlaeroporto = null,
+            xmlcidade = null;    
+        
+        $.get("data/aeroportos.xml", function(data){
+            xmlaeroporto = data;
+        });
+        $.get("data/cidades.xml", function(data){
+            xmlcidade = data;
+        });
+        
+        var result = {};
+
+        function busca_cidade(key, needed){
+            if(!key || key == "") return;
+            var xpath;	
+            if(isNaN(key)){
+                xpath = '//cidade[uf="'+key.trim()+'" or contains(nome, "'+key.trim()+'")]'; 	
+            } else {
+                xpath = '//cidade[ibge="'+parseInt(key)+'"]';
+            }
+            var cid = xmlcidade.evaluate(xpath, xmlcidade.documentElement, null, XPathResult.ANY_TYPE, null);
+            var r, ibge;
+            while(r = cid.iterateNext()){
+                ibge = r.querySelector("ibge").textContent.trim();
+                if(result.hasOwnProperty(ibge)){
+                    if(!needed){
+                        result[ibge].matchedCity = true;
+                    }
+                } else {
+                    result[ibge] = {
+                        nome: r.querySelector("nome").textContent.trim(),
+                        uf: r.querySelector("uf").textContent.trim(),
+                        aeroportos: {},
+                        matchedCity: (!needed)
+                    };
+                    if(!needed){
+                        busca_aeroporto(ibge, true);   
+                    }
+                }
+            }
+        }
+
+        function busca_aeroporto(key, bycity){
+            if(!key || key == "") return;
+            var chave = key.trim();
+            var xpath;
+            
+            if(bycity){
+                xpath = '//aeroporto[cidade="'+chave+'"]';	
+            } else {
+                xpath = '//aeroporto[sigla="'+chave+'" or contains(nome, "'+chave+'")]';	
+            }
+            console.log(xpath);
+            var aero = xmlaeroporto.evaluate(xpath, xmlaeroporto.documentElement, null, XPathResult.ANY_TYPE, null);
+            var r, a, sigla, ibge;
+            while(r = aero.iterateNext()){
+                sigla = r.querySelector("sigla").textContent.trim();
+                if(bycity){
+                    if(!result[key].aeroportos.hasOwnProperty(sigla)){
+                        result[key].aeroportos[sigla] = {
+                            nome: r.querySelector("nome").textContent.trim(),
+                            matchedAirport: (bycity)?true:false	// faço isso porque pode vir undefined
+                        }
+                    }	
+                } else {
+                    ibge = r.querySelector("cidade").textContent.trim();
+                    if(!result.hasOwnProperty(ibge)){
+                        busca_cidade(ibge, true);
+                    }
+                    if(result[ibge].aeroportos.hasOwnProperty(sigla)){
+                        result[ibge].aeroportos[sigla].matchedAirport = true;
+                    } else {
+                        result[ibge].aeroportos[sigla] = {
+                            nome: r.querySelector("nome").textContent.trim(),
+                            matchedAirport: true
+                        }
+                    }
+                }
+            }
+        }
+        
+        function render(){
+            var str = "<div style=\"white-space: nowrap;\">";
+            for(var c in result){
+                str+= "<p>" + result[c].nome + ((result[c].matchedCity)?" (todos os aeroportos)":"");
+                for (var a in result[c].aeroportos){
+                    str+= "<br />&nbsp;&nbsp;&nbsp;&nbsp;("+a+") "+ result[c].aeroportos[a].nome;
+                }
+                str+= "</p>";
+            }
+            str+= "</div>";
+            $("#origem").attr("title", str).popover("show");
+        }
+
+        var __stackcall = 0;
+
+        function busca(obj){
+            __stackcall++;
+            result = {};
+            $("#origem").popover("destroy");
+            setTimeout(doBusca, 500, __stackcall, obj.value);
+        }
+        
+        function doBusca(stack, key){
+            if(stack < __stackcall) return;
+            
+            busca_cidade(key, false);
+            busca_aeroporto(key, false);
+            console.log(result);
+            render();
+        }
+
+        document.getElementById("origem").addEventListener("input", function(){
+            busca(this);
+        });
+    </script> -->
+</body>
+
+</html>

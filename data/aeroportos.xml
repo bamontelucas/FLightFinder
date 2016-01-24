@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aeroportos>
+    <aeroporto>
+        <sigla>AJU</sigla>
+        <nome>Aeroporto Santa Maria</nome>
+        <cidade>2800308</cidade>
+    </aeroporto>
+    <aeroporto>
+        <sigla>BEL</sigla>
+        <nome>Aeroporto Val de Caes</nome>
+        <cidade>1501402</cidade>
+    </aeroporto>
+    <aeroporto>
+        <sigla>BGX</sigla>
+        <nome>Aeroporto de Bagé</nome>
+        <cidade>4301602</cidade>
+    </aeroporto>
+    <aeroporto>
+        <sigla>BNU</sigla>
+        <nome>Aeroporto de Blumenau</nome>
+        <cidade>4202404</cidade>
+    </aeroporto>
+    <aeroporto>
+        <sigla>BPS</sigla>
+        <nome>Aeroporto de Porto Seguro</nome>
+        <cidade>2925303</cidade>
+    </aeroporto>
+    <aeroporto>
+        <sigla>BSB</sigla>
+        <nome>Aeroporto Juscelino Kubitschek</nome>
+        <cidade>5300108</cidade>
+    </aeroporto>
+    <aeroporto>
+        <sigla>BVB</sigla>
+        <nome>Aeroporto de Boa Vista</nome>
+        <cidade>1400100</cidade>
+    </aeroporto>
+    <aeroporto>
+        <sigla>CAC</sigla>
+        <nome>Aeroporto de Cascavel</nome>
+        <cidade>2303501</cidade>
+    </aeroporto>
+    <aeroporto>
+        <sigla>CGB</sigla>
+        <nome>Aeroporto de Cuiabá</nome>
+        <cidade>5103403</cidade>
+    </aeroporto>
+    <aeroporto>
+        <sigla>CGH</sigla>
+        <nome>Aeroporto de Congonhas</nome>
+        <cidade>3550308</cidade>
+    </aeroporto>
+    <aeroporto>
+        <sigla>CGR</sigla>
+        <nome>Aeroporto de Campo Grande</nome>
+        <cidade>2701506</cidade>
+    </aeroporto>
+    <aeroporto>
+        <sigla>CNF</sigla>
+        <nome>Aeroporto de Confins</nome>
+        <cidade>3106200</cidade>
+    </aeroporto>
+    <aeroporto>
+        <sigla>CPV</sigla>
+        <nome>Aeroporto João Suassuna</nome>
+        <cidade>2504009</cidade>
+    </aeroporto>
+    <aeroporto>
+        <sigla>CWB</sigla>
+        <nome>Aeroporto Afonso Pena</nome>
+        <cidade>4106902</cidade>
+    </aeroporto>
+    <aeroporto>
+        <sigla>CXJ</sigla>
+        <nome>Aeroporto de Caxias do Sul</nome>
+        <cidade>4305108</cidade>
+    </aeroporto>
+    <aeroporto>
+        <sigla>FLN</sigla>
+        <nome>Aeroporto de Florianópolis</nome>
+        <cidade>4205407</cidade>
+    </aeroporto>
+    <aeroporto>
+        <sigla>FOR</sigla>
+        <nome>Aeroporto Pinto Martins</nome>
+        <cidade>2304400</cidade>
+    </aeroporto>
+    <aeroporto>
+        <sigla>GIG</sigla>
+        <nome>Aeroporto do Galeão</nome>
+        <cidade>3304557</cidade>
+    </aeroporto>
+    <aeroporto>
+        <sigla>GPB</sigla>
+        <nome>Aeroporto de Guarapuava</nome>
+        <cidade>4109401</cidade>
+    </aeroporto>
+    <aeroporto>
+        <sigla>GRU</sigla>
+        <nome>Aeroporto Franco Montoro</nome>
+        <cidade>3550308</cidade>
+    </aeroporto>
+    <aeroporto>
+        <sigla>GYN</sigla>
+        <nome>Aeroporto de Goiânia</nome>
+        <cidade>5208707</cidade>
+    </aeroporto>
+    <aeroporto>
+        <sigla>IGU</sigla>
+        <nome>Aeroporto das Cataratas</nome>
+        <cidade>4108304</cidade>
+    </aeroporto>
+    <aeroporto>
+        <sigla>IMP</sigla>
+        <nome>Aeroporto Prefeito Renato Moreira</nome>
+        <cidade>2105302</cidade>
+    </aeroporto>
+    <aeroporto>
+        <sigla>IOS</sigla>
+        <nome>Aeroporto de Ilhéus</nome>
+        <cidade>2913606</cidade>
+    </aeroporto>
+    <aeroporto>
+        <sigla>JDO</sigla>
+        <nome>Aeroporto do Cariri</nome>
+        <cidade>2307304</cidade>
+    </aeroporto>
+    <aeroporto>
+        <sigla>JOI</sigla>
+        <nome>Aeroporto de Joinville</nome>
+        <cidade>4209102</cidade>
+    </aeroporto>
+    <aeroporto>
+        <sigla>JPA</sigla>
+        <nome>Aeroporto Pres. Castro Pinto</nome>
+        <cidade>2507507</cidade>
+    </aeroporto>
+    <aeroporto>
+        <sigla>JTC</sigla>
+        <nome>Moussa Nakhl Tobias</nome>
+        <cidade>3506003</cidade>
+    </aeroporto>
+    <aeroporto>
+        <sigla>LDB</sigla>
+        <nome>Aeroporto de Londrina</nome>
+        <cidade>4113700</cidade>
+    </aeroporto>
+    <aeroporto>
+        <sigla>LAJ</sigla>
+        <nome>Aeroporto de Lages</nome>
+        <cidade>4209300</cidade>
+    </aeroporto>
+    <aeroporto>
+        <sigla>MAO</sigla>
+        <nome>Aeroporto Eduardo Gomes</nome>
+        <cidade>1302603</cidade>
+    </aeroporto>
+    <aeroporto>
+        <sigla>MCZ</sigla>
+        <nome>Aeroporto Zumbi dos Palmares</nome>
+        <cidade>2704302</cidade>
+    </aeroporto>
+    <aeroporto>
+        <sigla>MGF</sigla>
+        <nome>Aeroporto de Maringá</nome>
+        <cidade>4115200</cidade>
+    </aeroporto>
+    <aeroporto>
+        <sigla>NAT</sigla>
+        <nome>Aeroporto Augusto Severo</nome>
+        <cidade>2408102</cidade>
+    </aeroporto>
+    <aeroporto>
+        <sigla>PET</sigla>
+        <nome>Aeroporto de Pelotas</nome>
+        <cidade>4314407</cidade>
+    </aeroporto>
+    <aeroporto>
+        <sigla>PLU</sigla>
+        <nome>Aeroporto da Pampulha</nome>
+        <cidade>3106200</cidade>
+    </aeroporto>
+    <aeroporto>
+        <sigla>PHB</sigla>
+        <nome>Aeroporto de Parnaíba</nome>
+        <cidade>2207702</cidade>
+    </aeroporto>
+    <aeroporto>
+        <sigla>PFB</sigla>
+        <nome>Aeroporto de Passo Fundo</nome>
+        <cidade>4314100</cidade>
+    </aeroporto>
+    <aeroporto>
+        <sigla>PMW</sigla>
+        <nome>Aeroporto de Palmas</nome>
+        <cidade>1721000</cidade>
+    </aeroporto>
+    <aeroporto>
+        <sigla>PNZ</sigla>
+        <nome>Aeroporto de Petrolina</nome>
+        <cidade>2611101</cidade>
+    </aeroporto>
+    <aeroporto>
+        <sigla>POA</sigla>
+        <nome>Aeroporto Salgado Filho</nome>
+        <cidade>4314902</cidade>
+    </aeroporto>
+    <aeroporto>
+        <sigla>REC</sigla>
+        <nome>Aeroporto dos Guararapes</nome>
+        <cidade>2611606</cidade>
+    </aeroporto>
+    <aeroporto>
+        <sigla>RIA</sigla>
+        <nome>Aeroporto de Santa Maria</nome>
+        <cidade>2409332</cidade>
+    </aeroporto>
+    <aeroporto>
+        <sigla>SDU</sigla>
+        <nome>Aeroporto Santos Dumont</nome>
+        <cidade>3304557</cidade>
+    </aeroporto>
+    <aeroporto>
+        <sigla>SLZ</sigla>
+        <nome>Aeroporto Marechal Cunha Machado</nome>
+        <cidade>2111300</cidade>
+    </aeroporto>
+    <aeroporto>
+        <sigla>SOD</sigla>
+        <nome>Aeroporto de Sorocaba</nome>
+        <cidade>3552205</cidade>
+    </aeroporto>
+    <aeroporto>
+        <sigla>SSA</sigla>
+        <nome>Aeroporto de Salvador</nome>
+        <cidade>2927408</cidade>
+    </aeroporto>
+    <aeroporto>
+        <sigla>THE</sigla>
+        <nome>Aeroporto Senador Petrônio Portela</nome>
+        <cidade>2211001</cidade>
+    </aeroporto>
+    <aeroporto>
+        <sigla>VCP</sigla>
+        <nome>Aeroporto de Campinas</nome>
+        <cidade>3509502</cidade>
+    </aeroporto>
+    <aeroporto>
+        <sigla>UDI</sigla>
+        <nome>Aeroporto de Uberlândia</nome>
+        <cidade>3170206</cidade>
+    </aeroporto>
+    <aeroporto>
+        <sigla>VDC</sigla>
+        <nome>Aeroporto de Vitória da Conquista</nome>
+        <cidade>2933307</cidade>
+    </aeroporto>
+    <aeroporto>
+        <sigla>VIX</sigla>
+        <nome>Aeroporto de Vitória</nome>
+        <cidade>3205309</cidade>
+    </aeroporto>
+    <aeroporto>
+        <sigla>XAP</sigla>
+        <nome>Aeroporto de Chapecó</nome>
+        <cidade>4204202</cidade>
+    </aeroporto>
+</aeroportos>

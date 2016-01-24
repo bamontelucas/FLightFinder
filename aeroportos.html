@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Flight Finder - Encontre seu voo</title>
+	<script src="js/jquery.js"></script>
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="shortcut icon" href="img/favicon.ico">
+	<!--<link rel="stylesheet" href="css/bootstrap-theme.css">-->
+	<script src="js/bootstrap.js"></script>
+	<script src="js/xml2table.js"></script>
+    <link rel="stylesheet" href="css/base.css">
+</head>
+
+<body role="document">
+	<nav class="navbar navbar-default navbar-fixed-top">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand logo" href="#">Flight<span class="logo-aviao"> &#x2708; </span>Finder</a>
+			</div>
+			<div id="navbar" class="navbar-collapse collapse">
+				<ul class="nav navbar-nav">
+					<li><a href="index.html">Home</a></li>
+					<li class="active"><a href="#">Listar aeroportos</a></li>
+                    <li><a href="voos.html">Listar vôos</a></li>
+					<!--<li><a href="#">Contato</a></li>-->
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+	<div class="container" role="main">
+		
+	</div>
+	<script>
+		$.get("data/aeroportos.xml", function(data){
+			var obj = xml2table(data, "aeroporto");
+			$("body > .container").append(obj);
+		});
+	</script>
+</body>
+
+</html>

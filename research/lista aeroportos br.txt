@@ -1,0 +1,52 @@
+AJU	Aeroporto Santa Maria	Aracaju	SE
+BEL	Aeroporto Val de Caes	Belém	PA 
+BGX	Aeroporto de Bagé	Bagé	RS
+BNU	Aeroporto de Blumenau	Blumenau	SC
+BPS	Aeroporto de Porto Seguro	BA
+BSB	Aeroporto Juscelino Kubitschek	Brasília	DF
+BVB	Aeroporto de Boa Vista RO
+CAC	Aeroporto de Cascavel	Cascavel	PR
+CGB	Aeroporto de Cuiabá	Cuiabá	MT
+CGH	Aeroporto de Congonhas	São Paulo	SP
+CGR	Aeroporto de Campo Grande	MS
+CNF	Aeroporto de Confins	Belo Horizonte	MG
+CPV	Aeroporto João Suassuna	Campina Grande	PB
+CWB	Aeroporto Afonso Pena	Curitiba	PR
+CXJ	Aeroporto de Caxias do Sul	RS
+FLN	Aeroporto de Florianópolis	Florianópolis	SC
+FOR	Aeroporto Pinto Martins	Fortaleza
+GIG	Aeroporto do Galeão	Rio de Janeiro	RJ
+GPB	Aeroporto de Guarapuava	Guarapuava	PR
+GRU	Aeroporto Franco Montoro	São Paulo	SP
+GYN	Aeroporto de Goiânia	Goiânia	GO
+IGU	Aeroporto das Cataratas	Foz do Iguaçu	PR
+IMP	Aeroporto Prefeito Renato Moreira	Imperatriz	MA
+IOS	Aeroporto de Ilhéus	Ilhéus	BA
+JDO	Aeroporto do Cariri	Juazeiro do Norte	CE
+JOI	Aeroporto de Joinville	Joinville	SC
+JPA	Aeroporto Pres. Castro Pinto	João Pessoa	PB
+LDB	Aeroporto de Londrina	Londrina	PR
+LAJ	Aeroporto de Lages	Lages	RS
+MAO	Aeroporto Eduardo Gomes	Manaus	AM
+MCZ	Aeroporto Zumbi dos Palmares	Maceió	AL
+MGF	Aeroporto de Maringá	Maringá	PR
+NAT	Aeroporto Augusto Severo	Natal	RN
+PET	Aeroporto de Pelotas	Pelotas	RS
+PLU	Aeroporto da Pampulha	Belo Horizonte	MG
+PHB	Aeroporto de Parnaíba	Parnaíba	PI
+PFB	Aeroporto de Passo Fundo	RS
+PMW	Aeroporto de Palmas	Palmas	TO
+PNZ	Aeroporto de Petrolina	Petrolina	PE
+POA	Aeroporto Salgado Filho	Porto Alegre	RS
+REC	Aeroporto dos Guararapes	Recife	PE
+RIA	Aeroporto de Santa Maria	RS
+SDU	Aeroporto Santos Dumont	Rio de Janeiro	RJ
+SLZ	Aeroporto Marechal Cunha Machado	São Luis	MA
+SOD	Aeroporto de Sorocaba	Sorocaba	SP
+SSA	Aeroporto de Salvador	Salvador	BA
+THE	Aeroporto Senador Petrônio Portela	Teresina	PI
+VCP	Aeroporto de Campinas	Campinas	SP
+UDI	Aeroporto de Uberlândia	Uberlândia	MG
+VDC	Aeroporto de Vitória da Conquista	BA
+VIX	Aeroporto de Vitória	Vitória	ES
+XAP	Aeroporto de Chapecó	Chapecó	SC

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="js/jquery.js"></script>
+	<link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="shortcut icon" href="img/favicon.ico">
+	<!--<link rel="stylesheet" href="css/bootstrap-theme.css">-->
+	<script src="js/bootstrap.js"></script>
+    <script>
+        var aeroportos, x;
+        $(document).ready(function(){
+            $.get("data/aeroportos.xml", function(data){
+                aeroportos = data;
+                document.querySelector("button").disabled = false;
+            });
+        });
+        function rodar(){
+            var query = document.querySelector("textarea").value;
+            var output = document.querySelector("pre");
+            output.textContent = "";
+            var r = aeroportos.evaluate(query, aeroportos.documentElement, null, XPathResult.ANY_TYPE, null);
+            var i;
+            while(i = r.iterateNext()){
+                if(i.outerHTML){
+                    output.textContent+= i.outerHTML;    
+                } else {
+                    output.textContent+= i.textContent;
+                }
+                output.textContent+=  "\n";
+                x = i; console.log(i);
+            }
+            console.log("done");
+        }
+    </script>
+</head>
+<body>
+	<textarea class="form-control">//aeroporto[contains(nome,"Aeroporto")]</textarea>
+    <button type="button" class="btn btn-default" onclick="rodar()" disabled>Rodar XPath</button>
+    <pre></pre>
+</body>
+</html>

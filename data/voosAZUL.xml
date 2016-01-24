@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<voosAZUL>
+    <voo>
+        <origem>VCP</origem>
+        <destino>CNF</destino>
+        <datasaida>19/02/2016</datasaida>
+		<horasaida>22:00</horasaida>
+		<datachegada>19/02/2016</datachegada>
+		<horachegada>23:30</horachegada>
+		<preco>R$425,00</preco>
+        <passagens>09</passagens>        
+	</voo>
+	<voo>
+        <origem>BEL</origem>
+        <destino>XAP</destino>
+        <datasaida>19/02/2016</datasaida>
+		<horasaida>18:30</horasaida>
+		<datachegada>19/02/2016</datachegada>
+		<horachegada>21:30</horachegada>
+		<preco>R$900,00</preco>
+        <passagens>02</passagens>
+        
+	</voo>
+	<voo>
+        <origem>VCP</origem>
+        <destino>JOI</destino>
+        <datasaida>20/02/2016</datasaida>
+		<horasaida>07:30</horasaida>
+		<datachegada>20/02/2016</datachegada>
+		<horachegada>10:20</horachegada>
+		<preco>R$285,00</preco>
+        <passagens>03</passagens>
+        
+	</voo>
+	<voo>
+        <origem>VIX</origem>
+        <destino>GYN</destino>
+        <datasaida>20/02/2016</datasaida>
+		<horasaida>18:30</horasaida>
+		<datachegada>20/02/2016</datachegada>
+		<horachegada>19:50</horachegada>
+		<preco>R$540,00</preco>
+        <passagens>04</passagens>
+        
+	</voo>
+	<voo>
+        <origem>RIA</origem>
+        <destino>JAJ</destino>
+        <datasaida>21/02/2016</datasaida>
+		<horasaida>07:30</horasaida>
+		<datachegada>21/02/2016</datachegada>
+		<horachegada>09:00</horachegada>
+		<preco>R$350,00</preco>
+        <passagens>05</passagens>
+        
+	</voo>
+	<voo>
+        <origem>FLN</origem>
+        <destino>CGH</destino>
+        <datasaida>21/02/2016</datasaida>
+		<horasaida>13:30</horasaida>
+		<datachegada>21/02/2016</datachegada>
+		<horachegada>16:30</horachegada>
+		<preco>R$1200,00</preco>
+        <passagens>06</passagens>
+        
+	</voo>
+	<voo>
+        <origem>UDI</origem>
+        <destino>FOR</destino>
+        <datasaida>21/02/2016</datasaida>
+		<horasaida>18:00</horasaida>
+		<datachegada>21/02/2016</datachegada>
+		<horachegada>23:00</horachegada>
+		<preco>R$850,00</preco>
+        <passagens>07</passagens>
+        
+	</voo>
+	<voo>
+        <origem>GRU</origem>
+        <destino>SLZ</destino>
+        <datasaida>22/02/2016</datasaida>
+		<horasaida>18:00</horasaida>
+		<datachegada>22/02/2016</datachegada>
+		<horachegada>20:00</horachegada>
+		<preco>R$800,00</preco>
+        <passagens>08</passagens>
+        
+	</voo>
+	<voo>
+        <origem>REC</origem>
+        <destino>XAP</destino>
+        <datasaida>22/02/2016</datasaida>
+		<horasaida>18:30</horasaida>
+		<datachegada>23/02/2016</datachegada>
+		<horachegada>00:00</horachegada>
+		<preco>R$900,00</preco>
+        <passagens>09</passagens>
+        
+	</voo>
+	<voo>
+        <origem>AJU</origem>
+        <destino>MAO</destino>
+        <datasaida>23/02/2016</datasaida>
+		<horasaida>08:00</horasaida>
+		<datachegada>23/02/2016</datachegada>
+		<horachegada>09:20</horachegada>
+		<preco>R$575,00</preco>
+        <passagens>10</passagens>
+        
+	</voo>
+	<voo>
+        <origem>JDB</origem>
+        <destino>PET</destino>
+        <datasaida>23/02/2016</datasaida>
+		<horasaida>10:00</horasaida>
+		<datachegada>23/02/2016</datachegada>
+		<horachegada>12:20</horachegada>
+		<preco>R$700,00</preco>
+        <passagens>11</passagens>
+        
+	</voo>
+	<voo>
+        <origem>PFB</origem>
+        <destino>CGR</destino>
+        <datasaida>23/02/2016</datasaida>
+		<horasaida>19:30</horasaida>
+		<datachegada>2/02/2016</datachegada>
+		<horachegada>23:15</horachegada>
+		<preco>R$900,00</preco>
+        <passagens>12</passagens>
+        
+	</voo>
+	<voo>
+        <origem>GRU</origem>
+        <destino>SOD</destino>
+        <datasaida>24/02/2016</datasaida>
+		<horasaida>07:00</horasaida>
+		<datachegada>24/02/2016</datachegada>
+		<horachegada>09:00</horachegada>
+		<preco>R$585,00</preco>
+        <passagens>13</passagens>
+        
+	</voo>
+	<voo>
+        <origem>PFB</origem>
+        <destino>BNU</destino>
+        <datasaida>24/02/2016</datasaida>
+		<horasaida>08:30</horasaida>
+		<datachegada>25/02/2016</datachegada>
+		<horachegada>15:40</horachegada>
+		<preco>R$900,00</preco>
+        <passagens>14</passagens>
+        
+	</voo>
+	<voo>
+        <origem>POA</origem>
+        <destino>IGU</destino>
+        <datasaida>25/02/2016</datasaida>
+		<horasaida>06:30</horasaida>
+		<datachegada>25/02/2016</datachegada>
+		<horachegada>10:00</horachegada>
+		<preco>R$390,00</preco>
+        <passagens>15</passagens>
+        
+	</voo>
+	<voo>
+        <origem>POA</origem>
+        <destino>JTC</destino>
+        <datasaida>25/02/2016</datasaida>
+		<horasaida>18:00</horasaida>
+		<datachegada>25/02/2016</datachegada>
+		<horachegada>20:25</horachegada>
+		<preco>R$416,00</preco>
+        <passagens>16</passagens>
+        
+	</voo>
+	<voo>
+        <origem>JTC</origem>
+        <destino>CIG</destino>
+        <datasaida>26/02/2016</datasaida>
+		<horasaida>18:30</horasaida>
+		<datachegada>26/02/2016</datachegada>
+		<horachegada>22:37</horachegada>
+		<preco>R$849,00</preco>
+        <passagens>17</passagens>
+        
+	</voo>
+	<voo>
+        <origem>PET</origem>
+        <destino>VIX</destino>
+        <datasaida>27/02/2016</datasaida>
+		<horasaida>07:00</horasaida>
+		<datachegada>27/02/2016</datachegada>
+		<horachegada>08:30</horachegada>
+		<preco>R$199,00</preco>
+        <passagens>18</passagens>
+        
+	</voo>
+	<voo>
+        <origem>MAO</origem>
+        <destino>SSA</destino>
+        <datasaida>27/02/2016</datasaida>
+		<horasaida>21:00</horasaida>
+		<datachegada>28/02/2016</datachegada>
+		<horachegada>00:00</horachegada>
+		<preco>R$925,00</preco>
+        <passagens>19</passagens>
+        
+	</voo>
+	<voo>
+        <origem>JDB</origem>
+        <destino>AJU</destino>
+        <datasaida>28/02/2016</datasaida>
+		<horasaida>09:00</horasaida>
+		<datachegada>28/02/2016</datachegada>
+		<horachegada>11:13</horachegada>
+		<preco>R$447,00</preco>
+        <passagens>20</passagens>
+        
+	</voo>
+	<voo>
+        <origem>IGU</origem>
+        <destino>SSA</destino>
+        <datasaida>28/02/2016</datasaida>
+		<horasaida>19:30</horasaida>
+		<datachegada>28/02/2016</datachegada>
+		<horachegada>21:19</horachegada>
+		<preco>R$716,00</preco>
+        <passagens>21</passagens>
+        
+	</voo>
+	<voo>
+        <origem>FLN</origem>
+        <destino>SDU</destino>
+        <datasaida>29/02/2016</datasaida>
+		<horasaida>08:15</horasaida>
+		<datachegada>29/02/2016</datachegada>
+		<horachegada>12:00</horachegada>
+		<preco>R$581,00</preco>
+        <passagens>22</passagens>
+        
+	</voo>
+	<voo>
+        <origem>NAT</origem>
+        <destino>IMP</destino>
+        <datasaida>29/02/2016</datasaida>
+		<horasaida>20:00</horasaida>
+		<datachegada>29/02/2016</datachegada>
+		<horachegada>22:50</horachegada>
+		<preco>R$1045,00</preco>
+        <passagens>23</passagens>
+        
+	</voo>
+	<voo>
+        <origem>FOR</origem>
+        <destino>VIX</destino>
+        <datasaida>29/02/2016</datasaida>
+		<horasaida>23:30</horasaida>
+		<datachegada>30/02/2016</datachegada>
+		<horachegada>01:40</horachegada>
+		<preco>R$1100,00</preco>
+        <passagens>24</passagens>
+        
+	</voo>
+	<voo>
+        <origem>VCP</origem>
+        <destino>UDI</destino>
+        <datasaida>30/02/2016</datasaida>
+		<horasaida>04:00</horasaida>
+		<datachegada>30/02/2016</datachegada>
+		<horachegada>08:00</horachegada>
+		<preco>R$650,00</preco>
+        <passagens>25</passagens>
+        
+	</voo>
+	<voo>
+        <origem>BVB</origem>
+        <destino>CAC</destino>
+        <datasaida>30/02/2016</datasaida>
+		<horasaida>10:00</horasaida>
+		<datachegada>30/02/2016</datachegada>
+		<horachegada>12:00</horachegada>
+		<preco>R$740,00</preco>
+        <passagens>26</passagens>
+        
+	</voo>
+	<voo>
+        <origem>UDI</origem>
+        <destino>SOD</destino>
+        <datasaida>31/02/2016</datasaida>
+		<horasaida>07:00</horasaida>
+		<datachegada>31/02/2016</datachegada>
+		<horachegada>9:00</horachegada>
+		<preco>R$1000,00</preco>
+        <passagens>27</passagens>
+        
+	</voo>
+</voosAZUL>

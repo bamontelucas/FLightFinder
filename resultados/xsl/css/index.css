@@ -1,0 +1,73 @@
+body{
+    position: relative;
+}
+body::before{
+    content: "";
+    min-width: 100vw;
+    min-height: calc(100vh + 70px);
+    /*min-height: calc(100vh + 5vh);*/
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -1;
+    background-color: rgb(16, 44, 107);
+    top: -70px;
+    /*top: -5vh;*/
+    background-image: url(../img/banner2.jpg);
+    background-size: 100%;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    opacity: 0.3;
+}
+
+.titulo{
+    color: white;
+    text-shadow: 0 0.1vw 0.2vw black;
+	font-family: "Logo";
+	font-size: 6vw;
+}
+.titulo-aviao{
+	font-size: 20%;
+	line-height: 6vw;
+	vertical-align: middle;
+}
+.logo{
+	font-family: "Logo";
+	font-size: 48px;
+	line-height: 48px !important;
+	padding-top: 0px !important;
+}
+.logo-aviao{
+	line-height: 48px;
+	vertical-align: middle;
+	font-size: 20%;
+}
+fieldset, .opcao{
+    background-color: white;
+    padding: 1vw;
+    border-radius: 1vw;
+    box-shadow: 0 0 0vh .25vh rgba(0,0,0,.2), 
+                0 0.5vh 0.5vh 0.25vh rgba(0,0,0,.2);
+}
+.form-group > label:not(.radio-inline):after{
+    content: ":";
+}
+.fonte-padrao{
+	font-family: "Amatic SC";
+}
+.cidade-aeroporto{
+	padding: 1em;
+}
+.cidade-aeroporto[onclick]{
+	transition: background-color .3s;
+	border-radius: .25em;
+}
+.cidade-aeroporto[onclick][data-tipo="C"]:after{
+	content: " (todos os aeroportos)";
+}
+.cidade-aeroporto[onclick]:hover{
+	background-color: rgba(0,0,0,.1);
+}
+.popover{
+    max-width: 100%; /* Max Width of the popover (depending on the container!) */
+}

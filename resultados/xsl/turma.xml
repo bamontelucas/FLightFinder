@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+    <?xml-stylesheet href="turma.xsl" type="text/xsl" ?>
+        <discentes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceschemaLocation="turma.xsd">
+            <aluno>
+                <ra> 1026384 </ra>
+                <nome>Adolfo Pizarro de Souza</nome>
+                <email>adolfo@fc.unesp.br</email>
+                <situacao> Aluno Regularmente Matriculado </situacao>
+                <curso>BSI</curso>
+                <data-matricula>2015-01-01</data-matricula>
+                <tipo-ingresso>Vestibular</tipo-ingresso>
+            </aluno>
+            <aluno>
+                <ra> 1022583 </ra>
+                <nome>Celso Silverio de Freitas</nome>
+                <email>celso@gmail.com </email>
+                <situacao> Aluno Regularmente Matriculado </situacao>
+                <curso>BCC</curso>
+                <data-matricula>2012-01-01</data-matricula>
+                <tipo-ingresso>Vestibular</tipo-ingresso>
+            </aluno>
+            <aluno>
+                <ra> 1025591 </ra>
+                <nome>Daniel Gomes Candido</nome>
+                <email>daniel@gmail.com</email>
+                <situacao> Aluno Regularmente Matriculado</situacao>
+                <curso>BCC</curso>
+                <data-matricula>2011-06-01</data-matricula>
+                <tipo-ingresso>Transferência</tipo-ingresso>
+            </aluno>
+            <aluno>
+                <ra> 923965 </ra>
+                <nome>Danilo Pimentel Suaiden</nome>
+                <email>danilo@gmail.com</email>
+                <situacao> Aluno Regularmente Matriculado</situacao>
+                <curso>BSI</curso>
+                <data-matricula>2014-04-01</data-matricula>
+                <tipo-ingresso>Vestibular</tipo-ingresso>
+            </aluno>
+            <aluno>
+                <ra> 924883 </ra>
+                <nome>Diego de Biagi Viana</nome>
+                <email>diego@gmail.com</email>
+                <situacao> Aluno Regularmente Matriculado</situacao>
+                <curso>BSI</curso>
+                <data-matricula>2013-02-01</data-matricula>
+                <tipo-ingresso>Transferência</tipo-ingresso>
+            </aluno>
+            <aluno>
+                <ra> 923181 </ra>
+                <nome>Elisa Castro Livramento</nome>
+                <email>elisa@msn.com</email>
+                <situacao> Aluno Regularmente Matriculado</situacao>
+                <curso>BCC</curso>
+                <data-matricula>2012-01-01</data-matricula>
+                <tipo-ingresso>Vestibular</tipo-ingresso>
+            </aluno>
+        </discentes>

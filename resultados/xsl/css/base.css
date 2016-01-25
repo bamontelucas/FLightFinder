@@ -1,0 +1,25 @@
+@font-face{
+    font-family: Logo;
+    src: url(../fonts/Logo.ttf);
+}
+html, body{
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+body{
+    padding-top: 70px;
+}
+.logo{
+    font-family: "Logo";
+    font-size: 48px;
+    line-height: 48px !important;
+    padding-top: 0px !important;
+}
+.logo-aviao{
+    line-height: 48px;
+    vertical-align: middle;
+    font-size: 20%;
+}

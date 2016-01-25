@@ -4,10 +4,8 @@ var xmlsvoos = {
     azul: null,
     tam: null
 };
-var conditions = '';
+var conditions = [];
 var condition_destino = '';
-var aeroportos_origem = [];
-var aeroportos_destino = [];
 var origem_ready = false;
 var destino_ready = false;
 var par = {};
@@ -45,14 +43,19 @@ function monta_destino(aeroportos){
     destino_ready = true;
 }
 
-function busca_aeroporto(cidade){
+function busca_aeroporto(cidade, callback){
+    if(xmlaeroporto === null){
+        setTimeout(busca_aeroporto, 100, cidade, callback);
+        return;
+    }    
+    
     var aero = document.evaluate('//aeroporto[cidade="'+cidade+'"]/sigla/text()', xmlaeroporto.documentElement, null, XPathResult.ANY_TYPE, null);
     var a;
     var aeroportos = [];
     while(a = aero.iterateNext()) {
         aeroportos.push(a.data);
     }
-    return aeroportos;
+    callback(aeroportos);
 }
 
 function voos_ready() {
@@ -85,39 +88,27 @@ function search(){
         i.node.appendChild(el);
         voos.documentElement.appendChild(i.node);
     });
-    
-    search_escala([]);
 }
 
 function search_escala(aeroportos) {
     
 }
 
-function begin() {
-    get_param();
-    conditions = 'datasaida="'+par.ida+'" and passagens>="'+par.pessoas+'"';
-    if(par['tipo-origem'] == 'A') {
-        aeroportos_origem.push(par.origem);
-        origem_ready = true;
-    } else {
-        aeroportos_origem = busca_aeroporto;
-    }
-    if(par['tipo-destino'] == 'A') {
-        aeroportos_destino.push(par.destino);
-        destino_ready = true;
-    } else {
-        aeroportos_destino = busca_aeroporto(par.destino);
-    }
+get_param();
 
-    search();
+conditions.push('datasaida="'+par.ida+'"');
+conditions.push('passagens>="'+par.pessoas+'"');
+if(par['tipo-origem'] == 'A') {
+    conditions.push('origem="'+par.origem+'"');
+    origem_ready = true;
+} else {
+    busca_aeroporto(par.origem, monta_origem);
+}
+if(par['tipo-destino'] == 'A') {
+    condition_destino = ' and destino="'+par.destino+'"';
+    destino_ready = true;
+} else {
+    busca_aeroporto(par.destino, monta_destino);
 }
 
-function testxml(callback) {
-    if (xmlaeroporto === null || xmlsvoos.tam === null || xmlsvoos.azul === null || xmlsvoos.gol === null) {
-        setTimeout(callback, 100);
-        return;
-    }
-    callback();
-}
-
-testxml(begin);
+search();

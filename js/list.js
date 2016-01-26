@@ -5,12 +5,10 @@ var xmlsvoos = {
     tam: null
 };
 var conditions = '';
-var condition_destino = '';
 var aeroportos_origem = [];
 var aeroportos_destino = [];
-var origem_ready = false;
-var destino_ready = false;
 var par = {};
+var result;
 
 $.get('data/aeroportos.xml', function(data){
     xmlaeroporto = data;
@@ -33,18 +31,6 @@ function get_param(){
     });
 }
 
-function monta_origem(aeroportos){
-    if(aeroportos.length == 0) return;
-    conditions.push('(origem="' + aeroportos.join('" or origem="') + '")');
-    origem_ready = true;
-}
-
-function monta_destino(aeroportos){
-    if(aeroportos.length == 0) return;
-    condition_destino = ' and (destino="' + aeroportos.join('" or destino="') + '")';
-    destino_ready = true;
-}
-
 function busca_aeroporto(cidade){
     var aero = document.evaluate('//aeroporto[cidade="'+cidade+'"]/sigla/text()', xmlaeroporto.documentElement, null, XPathResult.ANY_TYPE, null);
     var a;
@@ -59,38 +45,81 @@ function voos_ready() {
     return !(xmlsvoos.gol === null || xmlsvoos.azul === null || xmlsvoos.tam === null);
 }
 
-function search(){
-    if(!(origem_ready && destino_ready && voos_ready())){
-        setTimeout(search, 100);
-        return;   
-    }
-    
-    var voos = document.implementation.createDocument("", "voos", null);
+function xpath_in(tag, values) {
+    return '(' + tag + '="' + values.join('" or ' + tag + '="') + '")';
+}
+
+function array_voos_to_xml_voos(arr) {
+    arr.forEach(function(i) {
+        var el = result.createElement('operadora');
+        el.textContent = i.cia;
+        i.node.appendChild(el);
+        result.documentElement.appendChild(i.node);
+    });
+}
+
+function search(){    
+    result = document.implementation.createDocument("", "voos", null);
     var arr = [];
-    var r, voo, xml;
+    var xpath = '//voo[' + conditions + ' and ' + xpath_in('origem', aeroportos_origem) + ' and ' + xpath_in('destino', aeroportos_destino) + ']';  
+    var voos, voo, xml;
     
     for(var cia in xmlsvoos) {
         xml = xmlsvoos[cia];
-        r = document.evaluate('//voo['+conditions.join(' and ')+condition_destino+']', xml.documentElement, null, XPathResult.ANY_TYPE, null);
-        while(voo = r.iterateNext()) {
+        voos = document.evaluate(xpath, xml.documentElement, null, XPathResult.ANY_TYPE, null);
+        while(voo = voos.iterateNext()) {
             arr.push({
                 node: voo,
                 cia: cia 
             });
         }     
     }
-    arr.forEach(function(i) {
-        var el = voos.createElement('operadora');
-        el.textContent = i.cia;
-        i.node.appendChild(el);
-        voos.documentElement.appendChild(i.node);
-    });
+    array_voos_to_xml_voos(arr);
+    var pesquisa = result.createElement('pesquisa');
+    pesquisa.innerHTML = '<origem>'+par.origem+'</origem><destino>'+par.destino+'</destino>';
+    result.documentElement.appendChild(pesquisa);
     
-    search_escala([]);
+    var html = xslt_apply();
+    var ifrm = document.getElementById('resultado');
+    ifrm = (ifrm.contentWindow) ? ifrm.contentWindow : (ifrm.contentDocument.document) ? ifrm.contentDocument.document : ifrm.contentDocument;
+    ifrm.document.open();
+    ifrm.document.write(html.documentElement.outerHTML);
+    ifrm.document.close();
+    //console.log(html.documentElement.outerHTML);
+    //arr = search_escala(aeroportos_origem.concat(aeroportos_destino));
+    //array_voos_to_xml_voos(arr);
+}
+
+function xslt_apply() {
+    var processor = new XSLTProcessor();
+    var xsl;
+    $.ajax({
+        url: 'resultados/xsl/voos.xsl',
+        async: false,
+        type: "GET",
+        success: function(data) {
+            xsl = data;
+        }
+    });
+    processor.importStylesheet(xsl);
+    return processor.transformToDocument(result);
 }
 
 function search_escala(aeroportos) {
+    var arr = [];
+    var xpath = '//voo[' + conditions + ' and ' + xpath_in('origem', aeroportos_origem) + ' and not' + xpath_in('destino', aeroportos) + ']';  
+    var voos, voo, xml;
     
+    for(var cia in xmlsvoos) {
+        xml = xmlsvoos[cia];
+        voos = document.evaluate(xpath, xml.documentElement, null, XPathResult.ANY_TYPE, null);
+        while(voo = voos.iterateNext()) {
+            arr.push({
+                node: voo,
+                cia: cia 
+            });
+        }     
+    }
 }
 
 function begin() {
@@ -98,13 +127,11 @@ function begin() {
     conditions = 'datasaida="'+par.ida+'" and passagens>="'+par.pessoas+'"';
     if(par['tipo-origem'] == 'A') {
         aeroportos_origem.push(par.origem);
-        origem_ready = true;
     } else {
-        aeroportos_origem = busca_aeroporto;
+        aeroportos_origem = busca_aeroporto(par.origem);
     }
     if(par['tipo-destino'] == 'A') {
         aeroportos_destino.push(par.destino);
-        destino_ready = true;
     } else {
         aeroportos_destino = busca_aeroporto(par.destino);
     }

@@ -122,7 +122,7 @@ function busca(obj){
     __stackcall++;
     result = {};
 	resultInput = obj;
-    //$(obj).popover("destroy");
+    $(obj).popover("destroy");
     setTimeout(doBusca, 500, __stackcall, obj.value);
 	$("[name='tipo-"+resultInput.id+"']").val("");
 	$("[name='"+resultInput.id+"']").val("");
@@ -133,6 +133,7 @@ function doBusca(stack, key){
     
     busca_cidade(key, false);
     busca_aeroporto(key, false);
+    console.log('aqui');
     render();
 }
 

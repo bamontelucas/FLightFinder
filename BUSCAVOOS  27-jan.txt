@@ -1,0 +1,7 @@
+Exemplos
+
+voos que saem 27/01
+
+GPB > GRU (6 VOOS) -> Aeroporto de Guarapuava - Aeroporto Franco Montoro
+GYN > IGU (3 VOOS) -> Aeroporto de Goiânia - Aeroporto das Cataratas
+IMP > IOS (2 VOOS) -> Aeroporto Prefeito Renato Moreira - Aeroporto de Ilhéus

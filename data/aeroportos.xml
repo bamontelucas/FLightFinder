@@ -4,265 +4,318 @@
         <sigla>AJU</sigla>
         <nome>Aeroporto Santa Maria</nome>
         <cidade>2800308</cidade>
+        <taxa>62.12</taxa>
     </aeroporto>
     <aeroporto>
         <sigla>BEL</sigla>
         <nome>Aeroporto Val de Caes</nome>
         <cidade>1501402</cidade>
+        <taxa>21.12</taxa>
     </aeroporto>
     <aeroporto>
         <sigla>BGX</sigla>
         <nome>Aeroporto de Bagé</nome>
         <cidade>4301602</cidade>
+        <taxa>61.26</taxa>
     </aeroporto>
     <aeroporto>
         <sigla>BNU</sigla>
         <nome>Aeroporto de Blumenau</nome>
         <cidade>4202404</cidade>
+        <taxa>11.27</taxa>
     </aeroporto>
     <aeroporto>
         <sigla>BPS</sigla>
         <nome>Aeroporto de Porto Seguro</nome>
         <cidade>2925303</cidade>
+        <taxa>168.63</taxa>
     </aeroporto>
     <aeroporto>
         <sigla>BSB</sigla>
         <nome>Aeroporto Juscelino Kubitschek</nome>
         <cidade>5300108</cidade>
+        <taxa>39.55</taxa>
     </aeroporto>
     <aeroporto>
         <sigla>BVB</sigla>
         <nome>Aeroporto de Boa Vista</nome>
         <cidade>1400100</cidade>
+        <taxa>48.12</taxa>
     </aeroporto>
     <aeroporto>
         <sigla>CAC</sigla>
         <nome>Aeroporto de Cascavel</nome>
         <cidade>2303501</cidade>
+        <taxa>36.75</taxa>
     </aeroporto>
     <aeroporto>
         <sigla>CGB</sigla>
         <nome>Aeroporto de Cuiabá</nome>
         <cidade>5103403</cidade>
+        <taxa>62.12</taxa>
     </aeroporto>
     <aeroporto>
         <sigla>CGH</sigla>
         <nome>Aeroporto de Congonhas</nome>
         <cidade>3550308</cidade>
+        <taxa>59.55</taxa>
     </aeroporto>
     <aeroporto>
         <sigla>CGR</sigla>
         <nome>Aeroporto de Campo Grande</nome>
         <cidade>2701506</cidade>
+        <taxa>84.12</taxa>
     </aeroporto>
     <aeroporto>
         <sigla>CNF</sigla>
         <nome>Aeroporto de Confins</nome>
         <cidade>3106200</cidade>
+        <taxa>62.38</taxa>
     </aeroporto>
     <aeroporto>
         <sigla>CPV</sigla>
         <nome>Aeroporto João Suassuna</nome>
         <cidade>2504009</cidade>
+        <taxa>22.78</taxa>
     </aeroporto>
     <aeroporto>
         <sigla>CWB</sigla>
         <nome>Aeroporto Afonso Pena</nome>
         <cidade>4106902</cidade>
+        <taxa>78.15</taxa>
     </aeroporto>
     <aeroporto>
         <sigla>CXJ</sigla>
         <nome>Aeroporto de Caxias do Sul</nome>
         <cidade>4305108</cidade>
+        <taxa>62.12</taxa>
     </aeroporto>
     <aeroporto>
         <sigla>FLN</sigla>
         <nome>Aeroporto de Florianópolis</nome>
         <cidade>4205407</cidade>
+        <taxa>51.77</taxa>
     </aeroporto>
     <aeroporto>
         <sigla>FOR</sigla>
         <nome>Aeroporto Pinto Martins</nome>
         <cidade>2304400</cidade>
+        <taxa>64.94</taxa>
     </aeroporto>
     <aeroporto>
         <sigla>GIG</sigla>
         <nome>Aeroporto do Galeão</nome>
         <cidade>3304557</cidade>
+        <taxa>69.65</taxa>
     </aeroporto>
     <aeroporto>
         <sigla>GPB</sigla>
         <nome>Aeroporto de Guarapuava</nome>
         <cidade>4109401</cidade>
+        <taxa>63.64</taxa>
     </aeroporto>
     <aeroporto>
         <sigla>GRU</sigla>
         <nome>Aeroporto Franco Montoro</nome>
         <cidade>3550308</cidade>
+        <taxa>69.16</taxa>
     </aeroporto>
     <aeroporto>
         <sigla>GYN</sigla>
         <nome>Aeroporto de Goiânia</nome>
         <cidade>5208707</cidade>
+        <taxa>42.77</taxa>
     </aeroporto>
     <aeroporto>
         <sigla>IGU</sigla>
         <nome>Aeroporto das Cataratas</nome>
         <cidade>4108304</cidade>
+        <taxa>88.16</taxa>
     </aeroporto>
     <aeroporto>
         <sigla>IMP</sigla>
         <nome>Aeroporto Prefeito Renato Moreira</nome>
         <cidade>2105302</cidade>
+        <taxa>66.21</taxa>
     </aeroporto>
     <aeroporto>
         <sigla>IOS</sigla>
         <nome>Aeroporto de Ilhéus</nome>
         <cidade>2913606</cidade>
+        <taxa>31.77</taxa>
     </aeroporto>
     <aeroporto>
         <sigla>JDO</sigla>
         <nome>Aeroporto do Cariri</nome>
         <cidade>2307304</cidade>
+        <taxa>72.27</taxa>
     </aeroporto>
     <aeroporto>
         <sigla>JOI</sigla>
         <nome>Aeroporto de Joinville</nome>
         <cidade>4209102</cidade>
+        <taxa>60.23</taxa>
     </aeroporto>
     <aeroporto>
         <sigla>JPA</sigla>
         <nome>Aeroporto Pres. Castro Pinto</nome>
         <cidade>2507507</cidade>
+        <taxa>28.32</taxa>
     </aeroporto>
     <aeroporto>
         <sigla>JTC</sigla>
         <nome>Moussa Nakhl Tobias</nome>
         <cidade>3506003</cidade>
+        <taxa>46.61</taxa>
     </aeroporto>
     <aeroporto>
         <sigla>LDB</sigla>
         <nome>Aeroporto de Londrina</nome>
         <cidade>4113700</cidade>
+        <taxa>65.16</taxa>
     </aeroporto>
     <aeroporto>
         <sigla>LAJ</sigla>
         <nome>Aeroporto de Lages</nome>
         <cidade>4209300</cidade>
+        <taxa>51.76</taxa>
     </aeroporto>
     <aeroporto>
         <sigla>MAO</sigla>
         <nome>Aeroporto Eduardo Gomes</nome>
         <cidade>1302603</cidade>
+        <taxa>88.33</taxa>
     </aeroporto>
     <aeroporto>
         <sigla>MCZ</sigla>
         <nome>Aeroporto Zumbi dos Palmares</nome>
         <cidade>2704302</cidade>
+        <taxa>52.16</taxa>
     </aeroporto>
     <aeroporto>
         <sigla>MGF</sigla>
         <nome>Aeroporto de Maringá</nome>
         <cidade>4115200</cidade>
+        <taxa>73.11</taxa>
     </aeroporto>
     <aeroporto>
         <sigla>NAT</sigla>
         <nome>Aeroporto Augusto Severo</nome>
         <cidade>2408102</cidade>
+        <taxa>11.88</taxa>
     </aeroporto>
     <aeroporto>
         <sigla>PET</sigla>
         <nome>Aeroporto de Pelotas</nome>
         <cidade>4314407</cidade>
+        <taxa>62.67</taxa>
     </aeroporto>
     <aeroporto>
         <sigla>PLU</sigla>
         <nome>Aeroporto da Pampulha</nome>
         <cidade>3106200</cidade>
+        <taxa>61.61</taxa>
     </aeroporto>
     <aeroporto>
         <sigla>PHB</sigla>
         <nome>Aeroporto de Parnaíba</nome>
         <cidade>2207702</cidade>
+        <taxa>63.11</taxa>
     </aeroporto>
     <aeroporto>
         <sigla>PFB</sigla>
         <nome>Aeroporto de Passo Fundo</nome>
         <cidade>4314100</cidade>
+        <taxa>62.21</taxa>
     </aeroporto>
     <aeroporto>
         <sigla>PMW</sigla>
         <nome>Aeroporto de Palmas</nome>
         <cidade>1721000</cidade>
+        <taxa>76.21</taxa>
     </aeroporto>
     <aeroporto>
         <sigla>PNZ</sigla>
         <nome>Aeroporto de Petrolina</nome>
         <cidade>2611101</cidade>
+        <taxa>72.22</taxa>
     </aeroporto>
     <aeroporto>
         <sigla>POA</sigla>
         <nome>Aeroporto Salgado Filho</nome>
         <cidade>4314902</cidade>
+        <taxa>92.16</taxa>
     </aeroporto>
     <aeroporto>
         <sigla>REC</sigla>
         <nome>Aeroporto dos Guararapes</nome>
         <cidade>2611606</cidade>
+        <taxa>12.52</taxa>
     </aeroporto>
     <aeroporto>
         <sigla>RIA</sigla>
         <nome>Aeroporto de Santa Maria</nome>
         <cidade>2409332</cidade>
+        <taxa>63.31</taxa>
     </aeroporto>
     <aeroporto>
         <sigla>SDU</sigla>
         <nome>Aeroporto Santos Dumont</nome>
         <cidade>3304557</cidade>
+        <taxa>62.12</taxa>
     </aeroporto>
     <aeroporto>
         <sigla>SLZ</sigla>
         <nome>Aeroporto Marechal Cunha Machado</nome>
         <cidade>2111300</cidade>
+        <taxa>53.16</taxa>
     </aeroporto>
     <aeroporto>
         <sigla>SOD</sigla>
         <nome>Aeroporto de Sorocaba</nome>
         <cidade>3552205</cidade>
+        <taxa>76.12</taxa>
     </aeroporto>
     <aeroporto>
         <sigla>SSA</sigla>
         <nome>Aeroporto de Salvador</nome>
         <cidade>2927408</cidade>
+        <taxa>122.42</taxa>
     </aeroporto>
     <aeroporto>
         <sigla>THE</sigla>
         <nome>Aeroporto Senador Petrônio Portela</nome>
         <cidade>2211001</cidade>
+        <taxa>84.21</taxa>
     </aeroporto>
     <aeroporto>
         <sigla>VCP</sigla>
         <nome>Aeroporto de Campinas</nome>
         <cidade>3509502</cidade>
+        <taxa>98.31</taxa>
     </aeroporto>
     <aeroporto>
         <sigla>UDI</sigla>
         <nome>Aeroporto de Uberlândia</nome>
         <cidade>3170206</cidade>
+        <taxa>75.21</taxa>
     </aeroporto>
     <aeroporto>
         <sigla>VDC</sigla>
         <nome>Aeroporto de Vitória da Conquista</nome>
         <cidade>2933307</cidade>
+        <taxa>51.12</taxa>
     </aeroporto>
     <aeroporto>
         <sigla>VIX</sigla>
         <nome>Aeroporto de Vitória</nome>
         <cidade>3205309</cidade>
+        <taxa>42.12</taxa>
     </aeroporto>
     <aeroporto>
         <sigla>XAP</sigla>
         <nome>Aeroporto de Chapecó</nome>
         <cidade>4204202</cidade>
+        <taxa>73.21</taxa>
     </aeroporto>
 </aeroportos>

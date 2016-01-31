@@ -70,7 +70,7 @@ function nomes(sigla, serialized) {
     
     if(!serialized) return obj;
     
-    var s = obj.aeroporto + '\n' + obj.cidade;
+    var s = obj.aeroporto + '<br/>' + obj.cidade;
     return s;
 }
 
@@ -93,8 +93,7 @@ function array_voos_to_xml_voos(escalas) {
         var escala = result.createElement('escala');
         escala.setAttribute('escalas', (esc.voos.length-1)+'');
         escala.setAttribute('companhia', esc.cia);
-        
-        esc.voos.forEach(function(v, idx){
+        esc.voos.forEach(function(v){
             var el = result.createElement('operadora');
             el.textContent = v.cia;
             v.appendChild(el);
@@ -141,23 +140,14 @@ function XMLSelect(xml, xpath) {
 	}
 }
 
-var g ;
-
-function log(arg1, arg2) {
-    var str = '['+(new Date()).toLocaleTimeString()+'] ';
-    console.log(str+arg1, arg2);
-}
-
 function search(origem, path, companhia) {
     var escalas = new Array();
     var xpath = '//voo[' + conditions + ' and ' + xpath_in('origem', origem) + ' and ' + xpath_in('destino', path, true) +']';
-    //console.log(xpath);
     for(var cia in xmlsvoos) {
         if(companhia === undefined || cia === companhia) {
             (new XMLSelect(xmlsvoos[cia], xpath)).run(function(voo) {
                 var destino = voo.querySelector('destino').textContent;
                 if(aeroportos_destino.indexOf(destino) != -1) {
-                    log(path.length+' voo', voo.outerHTML);
                     escalas.push({
                         cia: cia,
                         voos: [voo]
@@ -165,14 +155,15 @@ function search(origem, path, companhia) {
                 } else {
                     var next = search([destino], path.concat(destino), cia);
                     if(!(next instanceof NotFoundInXml)){
-                        log(path.length+' escalas', JSON.stringify(escalas.slice(0)));
-                        log(path.length+' next', JSON.stringify(next.slice(0)));
-                        next.forEach(function(e) {
+                        var aux;
+                        for(var i=0, e; e=next[i]; i++) {
+                            aux = e.voos.slice(0);
+                            aux.splice(0, 0, voo);
                             escalas.push({
-                                voos: e.voos.splice(0, 0, voo),
+                                voos: aux,
                                 cia: cia
                             });
-                        });
+                        };
                     }
                 }
             });

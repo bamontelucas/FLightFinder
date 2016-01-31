@@ -187,6 +187,88 @@
         
 	</voo>
 	<voo>
+        <origem>JTC</origem>
+        <destino>CGH</destino>
+        <datasaida>03/02/2016</datasaida>
+		<horasaida>06:30</horasaida>
+		<datachegada>03/02/2016</datachegada>
+		<horachegada>07:00</horachegada>
+		<preco>343.00</preco>
+        <passagens>28</passagens>
+        
+	</voo>	
+	<voo>
+        <origem>JTC</origem>
+        <destino>GRU</destino>
+        <datasaida>03/02/2016</datasaida>
+		<horasaida>09:30</horasaida>
+		<datachegada>03/02/2016</datachegada>
+		<horachegada>10:10</horachegada>
+		<preco>257.00</preco>
+        <passagens>11</passagens>
+	</voo>		
+	<voo>
+        <origem>CGH</origem>
+        <destino>NVT</destino>
+        <datasaida>03/02/2016</datasaida>
+		<horasaida>08:30</horasaida>
+		<datachegada>03/02/2016</datachegada>
+		<horachegada>09:15</horachegada>
+		<preco>106.00</preco>
+        <passagens>37</passagens>
+	</voo>			
+	<voo>
+        <origem>GRU</origem>
+        <destino>NVT</destino>
+        <datasaida>03/02/2016</datasaida>
+		<horasaida>11:30</horasaida>
+		<datachegada>03/02/2016</datachegada>
+		<horachegada>12:15</horachegada>
+		<preco>154.00</preco>
+        <passagens>29</passagens>
+	</voo>		
+	<voo>
+        <origem>JTC</origem>
+        <destino>CGH</destino>
+        <datasaida>03/02/2016</datasaida>
+		<horasaida>15:30</horasaida>
+		<datachegada>03/02/2016</datachegada>
+		<horachegada>16:00</horachegada>
+		<preco>281.00</preco>
+        <passagens>76</passagens>
+        
+	</voo>	
+	<voo>
+        <origem>JTC</origem>
+        <destino>GRU</destino>
+        <datasaida>03/02/2016</datasaida>
+		<horasaida>03:30</horasaida>
+		<datachegada>03/02/2016</datachegada>
+		<horachegada>04:00</horachegada>
+		<preco>102.00</preco>
+        <passagens>75</passagens>
+	</voo>		
+	<voo>
+        <origem>CGH</origem>
+        <destino>NVT</destino>
+        <datasaida>03/02/2016</datasaida>
+		<horasaida>18:45</horasaida>
+		<datachegada>03/02/2016</datachegada>
+		<horachegada>19:20</horachegada>
+		<preco>168.00</preco>
+        <passagens>12</passagens>
+	</voo>			
+	<voo>
+        <origem>GRU</origem>
+        <destino>NVT</destino>
+        <datasaida>03/02/2016</datasaida>
+		<horasaida>07:55</horasaida>
+		<datachegada>03/02/2016</datachegada>
+		<horachegada>08:35</horachegada>
+		<preco>206.00</preco>
+        <passagens>10</passagens>
+	</voo>	
+	<voo>
         <origem>PET</origem>
         <destino>VIX</destino>
         <datasaida>27/01/2016</datasaida>

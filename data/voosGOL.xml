@@ -241,6 +241,47 @@
         <passagens>23</passagens>
 	</voo>
 	<voo>
+        <origem>JTC</origem>
+        <destino>CGH</destino>
+        <datasaida>03/02/2016</datasaida>
+		<horasaida>11:10</horasaida>
+		<datachegada>03/02/2016</datachegada>
+		<horachegada>11:50</horachegada>
+		<preco>612.00</preco>
+        <passagens>15</passagens>
+        
+	</voo>	
+	<voo>
+        <origem>JTC</origem>
+        <destino>GRU</destino>
+        <datasaida>03/02/2016</datasaida>
+		<horasaida>11:20</horasaida>
+		<datachegada>03/02/2016</datachegada>
+		<horachegada>12:00</horachegada>
+		<preco>264.00</preco>
+        <passagens>18</passagens>
+	</voo>		
+	<voo>
+        <origem>CGH</origem>
+        <destino>NVT</destino>
+        <datasaida>03/02/2016</datasaida>
+		<horasaida>13:30</horasaida>
+		<datachegada>03/02/2016</datachegada>
+		<horachegada>14:05</horachegada>
+		<preco>168.00</preco>
+        <passagens>13</passagens>
+	</voo>			
+	<voo>
+        <origem>GRU</origem>
+        <destino>NVT</destino>
+        <datasaida>03/02/2016</datasaida>
+		<horasaida>15:00</horasaida>
+		<datachegada>03/02/2016</datachegada>
+		<horachegada>15:55</horachegada>
+		<preco>167.00</preco>
+        <passagens>39</passagens>
+	</voo>		
+	<voo>
         <origem>VCP</origem>
         <destino>UDI</destino>
         <datasaida>30/01/2016</datasaida>

@@ -15,12 +15,12 @@
                 <div class="row">
                     <div class="col-xs-5">
                         <xsl:apply-templates select="pesquisa/origem/name1"/><br/>
-                        <small class="text-muted"><xsl:apply-templates select="pesquisa/origem/name2"/></small>
+                        <small class="text-muted"><xsl:value-of disable-output-escaping="yes" select="pesquisa/origem/name2"/></small>
                     </div>
                     <div class="col-xs-2">✈</div>
                     <div class="col-xs-5">
                         <xsl:apply-templates select="pesquisa/destino/name1"/><br/>
-                        <small class="text-muted"><xsl:apply-templates select="pesquisa/destino/name2"/></small>
+                        <small class="text-muted"><xsl:value-of disable-output-escaping="yes" select="pesquisa/destino/name2"/></small>
                     </div>
                 </div>
             </h1>

@@ -7,7 +7,7 @@
 		<horasaida>23:55</horasaida>
 		<datachegada>20/01/2016</datachegada>
 		<horachegada>00:50</horachegada>
-		<preco>R$526,00</preco>
+		<preco>526.00</preco>
         <passagens>23</passagens>
 	</voo>
 	<voo>
@@ -17,7 +17,7 @@
 		<horasaida>22:30</horasaida>
 		<datachegada>19/01/2016</datachegada>
 		<horachegada>23:40</horachegada>
-		<preco>R$280,00</preco>
+		<preco>280.00</preco>
         <passagens>24</passagens>
 	</voo>
 	<voo>
@@ -27,7 +27,7 @@
 		<horasaida>08:00</horasaida>
 		<datachegada>20/01/2016</datachegada>
 		<horachegada>11:00</horachegada>
-		<preco>R$300,00</preco>
+		<preco>300.00</preco>
         <passagens>25</passagens>
 	</voo>
 	<voo>
@@ -37,7 +37,7 @@
 		<horasaida>14:00</horasaida>
 		<datachegada>20/01/2016</datachegada>
 		<horachegada>15:30</horachegada>
-		<preco>R$899,00</preco>
+		<preco>899.00</preco>
         <passagens>26</passagens>
 	</voo>
 	<voo>
@@ -47,7 +47,7 @@
 		<horasaida>06:15</horasaida>
 		<datachegada>21/01/2016</datachegada>
 		<horachegada>08:00</horachegada>
-		<preco>R$300,00</preco>
+		<preco>300.00</preco>
         <passagens>27</passagens>
 	</voo>
 	<voo>
@@ -57,7 +57,7 @@
 		<horasaida>16:00</horasaida>
 		<datachegada>21/01/2016</datachegada>
 		<horachegada>19:30</horachegada>
-		<preco>R$450,00</preco>
+		<preco>450.00</preco>
         <passagens>01</passagens>
 	</voo>
 	<voo>
@@ -67,7 +67,7 @@
 		<horasaida>21:45</horasaida>
 		<datachegada>21/01/2016</datachegada>
 		<horachegada>23:00</horachegada>
-		<preco>R$700,00</preco>
+		<preco>700.00</preco>
         <passagens>02</passagens>
 	</voo>
 	<voo>
@@ -77,7 +77,7 @@
 		<horasaida>22:00</horasaida>
 		<datachegada>23/01/2016</datachegada>
 		<horachegada>01:00</horachegada>
-		<preco>R$1200,00</preco>
+		<preco>1200.00</preco>
         <passagens>03</passagens>
 	</voo>
 	<voo>
@@ -87,7 +87,7 @@
 		<horasaida>22:30</horasaida>
 		<datachegada>23/01/2016</datachegada>
 		<horachegada>00:20</horachegada>
-		<preco>R$950,00</preco>
+		<preco>950.00</preco>
         <passagens>04</passagens>
 	</voo>
 	<voo>
@@ -97,7 +97,7 @@
 		<horasaida>06:00</horasaida>
 		<datachegada>27/01/2016</datachegada>
 		<horachegada>07:30</horachegada>
-		<preco>R$450,00</preco>
+		<preco>450.00</preco>
         <passagens>05</passagens>
 	</voo>
 	<voo>
@@ -107,7 +107,7 @@
 		<horasaida>09:30</horasaida>
 		<datachegada>27/01/2016</datachegada>
 		<horachegada>12:00</horachegada>
-		<preco>R$800,00</preco>
+		<preco>800.00</preco>
         <passagens>06</passagens>
 	</voo>
 	<voo>
@@ -117,7 +117,7 @@
 		<horasaida>14:15</horasaida>
 		<datachegada>27/01/2016</datachegada>
 		<horachegada>17:15</horachegada>
-		<preco>R$635,00</preco>
+		<preco>635.00</preco>
         <passagens>07</passagens>
 	</voo>
 	<voo>
@@ -127,7 +127,7 @@
 		<horasaida>15:00</horasaida>
 		<datachegada>25/01/2016</datachegada>
 		<horachegada>16:15</horachegada>
-		<preco>R$570,00</preco>
+		<preco>570.00</preco>
         <passagens>08</passagens>
 	</voo>
 	<voo>
@@ -137,7 +137,7 @@
 		<horasaida>06:30</horasaida>
 		<datachegada>27/01/2016</datachegada>
 		<horachegada>08:30</horachegada>
-		<preco>R$800,00</preco>
+		<preco>800.00</preco>
         <passagens>09</passagens>
 	</voo>
 	<voo>
@@ -147,7 +147,7 @@
 		<horasaida>14:00</horasaida>
 		<datachegada>27/01/2016</datachegada>
 		<horachegada>16:15</horachegada>
-		<preco>R$630,00</preco>
+		<preco>630.00</preco>
         <passagens>10</passagens>
 	</voo>
 	<voo>
@@ -157,7 +157,7 @@
 		<horasaida>17:00</horasaida>
 		<datachegada>27/01/2016</datachegada>
 		<horachegada>20:15</horachegada>
-		<preco>R$740,00</preco>
+		<preco>740.00</preco>
         <passagens>11</passagens>
 	</voo>
 	<voo>
@@ -167,7 +167,7 @@
 		<horasaida>22:45</horasaida>
 		<datachegada>28/01/2016</datachegada>
 		<horachegada>02:00</horachegada>
-		<preco>R$1100,00</preco>
+		<preco>1100.00</preco>
         <passagens>12</passagens>
 	</voo>
 	<voo>
@@ -177,7 +177,7 @@
 		<horasaida>09:00</horasaida>
 		<datachegada>27/01/2016</datachegada>
 		<horachegada>10:30</horachegada>
-		<preco>R$810,00</preco>
+		<preco>810.00</preco>
         <passagens>13</passagens>
 	</voo>
 	<voo>
@@ -187,7 +187,7 @@
 		<horasaida>17:00</horasaida>
 		<datachegada>28/01/2016</datachegada>
 		<horachegada>18:15</horachegada>
-		<preco>R$960,00</preco>
+		<preco>960.00</preco>
         <passagens>14</passagens>
 	</voo>
 	<voo>
@@ -197,7 +197,7 @@
 		<horasaida>05:00</horasaida>
 		<datachegada>29/01/2016</datachegada>
 		<horachegada>08:20</horachegada>
-		<preco>R$750,00</preco>
+		<preco>750.00</preco>
         <passagens>15</passagens>
 	</voo>
 	<voo>
@@ -207,7 +207,7 @@
 		<horasaida>11:30</horasaida>
 		<datachegada>29/01/2016</datachegada>
 		<horachegada>14:30</horachegada>
-		<preco>R$600,00</preco>
+		<preco>600.00</preco>
         <passagens>16</passagens>
 	</voo>
 	<voo>
@@ -217,7 +217,7 @@
 		<horasaida>11:30</horasaida>
 		<datachegada>29/01/2016</datachegada>
 		<horachegada>15:40</horachegada>
-		<preco>R$840,00</preco>
+		<preco>840.00</preco>
         <passagens>17</passagens>
 	</voo>
 	<voo>
@@ -227,7 +227,7 @@
 		<horasaida>18:50</horasaida>
 		<datachegada>27/01/2016</datachegada>
 		<horachegada>23:00</horachegada>
-		<preco>R$1000,00</preco>
+		<preco>1000.00</preco>
         <passagens>18</passagens>
 	</voo>
 	<voo>
@@ -237,7 +237,7 @@
 		<horasaida>22:30</horasaida>
 		<datachegada>30/01/2016</datachegada>
 		<horachegada>02:00</horachegada>
-		<preco>R$1450,00</preco>
+		<preco>1450.00</preco>
         <passagens>19</passagens>
 	</voo>
 	<voo>
@@ -247,7 +247,7 @@
 		<horasaida>04:00</horasaida>
 		<datachegada>30/01/2016</datachegada>
 		<horachegada>08:00</horachegada>
-		<preco>R$800,00</preco>
+		<preco>800.00</preco>
         <passagens>20</passagens>
 	</voo>
 	<voo>
@@ -257,7 +257,7 @@
 		<horasaida>09:00</horasaida>
 		<datachegada>30/01/2016</datachegada>
 		<horachegada>12:50</horachegada>
-		<preco>R$1199,00</preco>
+		<preco>1199.00</preco>
         <passagens>21</passagens>
 	</voo>
 	<voo>
@@ -267,7 +267,7 @@
 		<horasaida>16:00</horasaida>
 		<datachegada>30/01/2016</datachegada>
 		<horachegada>19:15</horachegada>
-		<preco>R$365,00</preco>
+		<preco>365.00</preco>
         <passagens>22</passagens>
 	</voo>
 </voosTAM>

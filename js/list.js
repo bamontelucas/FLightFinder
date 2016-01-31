@@ -1,4 +1,6 @@
 var xmlaeroporto = null;
+var xmlcidade = null;
+var xsl = null;
 var xmlsvoos = {
     gol: null,
     azul: null,
@@ -8,10 +10,22 @@ var conditions = '';
 var aeroportos_origem = [];
 var aeroportos_destino = [];
 var par = {};
-var result;
+var result = document.implementation.createDocument('', 'resultado', null);
+
+$.ajaxSetup({
+    error: function(xhr, status, error) {
+        console.error("An AJAX error occured: " + status + "\nError: " + error + "\nError detail: " + xhr.responseText);
+    } 
+});
 
 $.get('data/aeroportos.xml', function(data){
     xmlaeroporto = data;
+});
+$.get('data/cidades.xml', function(data){
+    xmlcidade = data;
+});
+$.get('../voos.xsl', function(data){
+    xsl = data;    
 });
 $.get('data/voosAZUL.xml', function(data){
     xmlsvoos.azul = data;
@@ -32,94 +46,182 @@ function get_param(){
 }
 
 function busca_aeroporto(cidade){
-    var aero = document.evaluate('//aeroporto[cidade="'+cidade+'"]/sigla/text()', xmlaeroporto.documentElement, null, XPathResult.ANY_TYPE, null);
-    var a;
     var aeroportos = [];
-    while(a = aero.iterateNext()) {
+    (new XMLSelect(xmlaeroporto, '//aeroporto[cidade="'+cidade+'"]/sigla/text()')).run(function(a){
         aeroportos.push(a.data);
-    }
+    });
     return aeroportos;
+}
+
+function nome_cidade(ibge) {
+    var cid;
+    (new XMLSelect(xmlcidade, '//cidade[ibge="'+ibge+'"]')).run(function(c) {
+        cid = c.querySelector('nome').textContent + ' - ' + c.querySelector('uf').textContent;
+    });
+    return cid;
+}
+
+function nomes(sigla, serialized) {
+    var obj = {};
+    (new XMLSelect(xmlaeroporto, '//aeroporto[sigla="'+sigla+'"]')).run(function(a){
+        obj.aeroporto = a.querySelector('nome').textContent    
+        obj.cidade = nome_cidade(a.querySelector('cidade').textContent);    
+    });
+    
+    if(!serialized) return obj;
+    
+    var s = obj.aeroporto + '\n' + obj.cidade;
+    return s;
 }
 
 function voos_ready() {
     return !(xmlsvoos.gol === null || xmlsvoos.azul === null || xmlsvoos.tam === null);
 }
 
-function xpath_in(tag, values) {
-    return '(' + tag + '="' + values.join('" or ' + tag + '="') + '")';
+function xpath_in(tag, values, notin) {
+    return (notin?'not ':'') + '(' + tag + '="' + values.join('" or ' + tag + '="') + '")';
 }
 
-function array_voos_to_xml_voos(arr) {
-    arr.forEach(function(i) {
-        var el = result.createElement('operadora');
-        el.textContent = i.cia;
-        i.node.appendChild(el);
-        result.documentElement.appendChild(i.node);
+function new_node(tag, content) {
+    var node = result.createElement(tag);
+    node.textContent = content || '';
+    return node;
+}
+
+function array_voos_to_xml_voos(escalas) {
+    escalas.forEach(function(esc) {
+        var escala = result.createElement('escala');
+        escala.setAttribute('escalas', (esc.voos.length-1)+'');
+        escala.setAttribute('companhia', esc.cia);
+        
+        esc.voos.forEach(function(v, idx){
+            var el = result.createElement('operadora');
+            el.textContent = v.cia;
+            v.appendChild(el);
+            
+            var o = nomes(v.querySelector('origem').textContent);
+            var d = nomes(v.querySelector('destino').textContent);
+            
+            v.appendChild(new_node('aeroportoorigem', o.aeroporto));
+            v.appendChild(new_node('cidadeorigem', o.cidade));
+            v.appendChild(new_node('aeroportodestino', d.aeroporto));
+            v.appendChild(new_node('cidadedestino', d.cidade));    
+            
+            escala.appendChild(v);     
+        });
+        
+        var attr = ['origem', 'aeroportoorigem', 'cidadeorigem'];
+        attr.forEach(function(a) {
+            escala.setAttribute(a, escala.firstChild.querySelector(a).textContent);
+        });
+        
+        attr = ['destino', 'aeroportodestino', 'cidadedestino'];
+        attr.forEach(function(a) {
+            escala.setAttribute(a, escala.lastChild.querySelector(a).textContent);
+        });   
+        
+        result.documentElement.appendChild(escala);     
     });
 }
 
-function search(){    
-    result = document.implementation.createDocument("", "voos", null);
-    var arr = [];
-    var xpath = '//voo[' + conditions + ' and ' + xpath_in('origem', aeroportos_origem) + ' and ' + xpath_in('destino', aeroportos_destino) + ']';  
-    var voos, voo, xml;
-    
+
+function NotFoundInXml() {};
+
+function XMLSelect(xml, xpath) {
+	this.xml = xml;
+	this.xpath = xpath;
+	this.run = function(closure) {
+        var r;
+		var registros = document.evaluate(xpath, xml.documentElement, null, XPathResult.ANY_TYPE, null);
+		var idx = 0;
+		while(r = registros.iterateNext()) {
+			closure(r, idx, registros);
+			idx++;
+		}
+	}
+}
+
+var g ;
+
+function log(arg1, arg2) {
+    var str = '['+(new Date()).toLocaleTimeString()+'] ';
+    console.log(str+arg1, arg2);
+}
+
+function search(origem, path, companhia) {
+    var escalas = new Array();
+    var xpath = '//voo[' + conditions + ' and ' + xpath_in('origem', origem) + ' and ' + xpath_in('destino', path, true) +']';
+    //console.log(xpath);
     for(var cia in xmlsvoos) {
-        xml = xmlsvoos[cia];
-        voos = document.evaluate(xpath, xml.documentElement, null, XPathResult.ANY_TYPE, null);
-        while(voo = voos.iterateNext()) {
-            arr.push({
-                node: voo,
-                cia: cia 
+        if(companhia === undefined || cia === companhia) {
+            (new XMLSelect(xmlsvoos[cia], xpath)).run(function(voo) {
+                var destino = voo.querySelector('destino').textContent;
+                if(aeroportos_destino.indexOf(destino) != -1) {
+                    log(path.length+' voo', voo.outerHTML);
+                    escalas.push({
+                        cia: cia,
+                        voos: [voo]
+                    });
+                } else {
+                    var next = search([destino], path.concat(destino), cia);
+                    if(!(next instanceof NotFoundInXml)){
+                        log(path.length+' escalas', JSON.stringify(escalas.slice(0)));
+                        log(path.length+' next', JSON.stringify(next.slice(0)));
+                        next.forEach(function(e) {
+                            escalas.push({
+                                voos: e.voos.splice(0, 0, voo),
+                                cia: cia
+                            });
+                        });
+                    }
+                }
             });
-        }     
+        }
     }
-    array_voos_to_xml_voos(arr);
-    var pesquisa = result.createElement('pesquisa');
-    pesquisa.innerHTML = '<origem>'+par.origem+'</origem><destino>'+par.destino+'</destino>';
-    result.documentElement.appendChild(pesquisa);
+    if(path.length != 0) {
+        if(escalas.length == 0) {
+            return new NotFoundInXml();
+        }
+    }
+    return escalas;
+}
+
+function prepare_result(arr) {
+    array_voos_to_xml_voos(arr);	
+    var pesquisa = new_node('pesquisa');
+    var origem = new_node('origem');
+    var destino = new_node('destino');
     
-    var html = xslt_apply();
+    if(par['tipo-origem'] == 'A') {
+        origem.appendChild(new_node('name1', par.origem));    
+        origem.appendChild(new_node('name2', nomes(par.origem, true)));    
+    } else {
+        origem.appendChild(new_node('name1', nome_cidade(par.origem)));    
+        origem.appendChild(new_node('name2', ''));
+    }
+    if(par['tipo-destino'] == 'A') {
+        destino.appendChild(new_node('name1', par.destino));    
+        destino.appendChild(new_node('name2', nomes(par.destino, true)));    
+    } else {
+        destino.appendChild(new_node('name1', nome_cidade(par.destino)));    
+        destino.appendChild(new_node('name2', ''));
+    }    
+    
+    pesquisa.appendChild(origem);
+    pesquisa.appendChild(destino);
+    
+    result.documentElement.appendChild(pesquisa);
+}
+
+function xslt_apply() {
+    var processor = new XSLTProcessor();
+    processor.importStylesheet(xsl);
+    var html = processor.transformToDocument(result);
     var ifrm = document.getElementById('resultado');
     ifrm = (ifrm.contentWindow) ? ifrm.contentWindow : (ifrm.contentDocument.document) ? ifrm.contentDocument.document : ifrm.contentDocument;
     ifrm.document.open();
     ifrm.document.write(html.documentElement.outerHTML);
     ifrm.document.close();
-    //console.log(html.documentElement.outerHTML);
-    //arr = search_escala(aeroportos_origem.concat(aeroportos_destino));
-    //array_voos_to_xml_voos(arr);
-}
-
-function xslt_apply() {
-    var processor = new XSLTProcessor();
-    var xsl;
-    $.ajax({
-        url: 'resultados/xsl/voos.xsl',
-        async: false,
-        type: "GET",
-        success: function(data) {
-            xsl = data;
-        }
-    });
-    processor.importStylesheet(xsl);
-    return processor.transformToDocument(result);
-}
-
-function search_escala(aeroportos) {
-    var arr = [];
-    var xpath = '//voo[' + conditions + ' and ' + xpath_in('origem', aeroportos_origem) + ' and not' + xpath_in('destino', aeroportos) + ']';  
-    var voos, voo, xml;
-    
-    for(var cia in xmlsvoos) {
-        xml = xmlsvoos[cia];
-        voos = document.evaluate(xpath, xml.documentElement, null, XPathResult.ANY_TYPE, null);
-        while(voo = voos.iterateNext()) {
-            arr.push({
-                node: voo,
-                cia: cia 
-            });
-        }     
-    }
 }
 
 function begin() {
@@ -136,12 +238,13 @@ function begin() {
         aeroportos_destino = busca_aeroporto(par.destino);
     }
 
-    search();
+    prepare_result(search(aeroportos_origem, []));
+    xslt_apply();
 }
 
 function testxml(callback) {
-    if (xmlaeroporto === null || xmlsvoos.tam === null || xmlsvoos.azul === null || xmlsvoos.gol === null) {
-        setTimeout(callback, 100);
+    if (xmlaeroporto === null || xmlcidade === null || xsl === null || xmlsvoos.tam === null || xmlsvoos.azul === null || xmlsvoos.gol === null) {
+        setTimeout(testxml, 100, callback);
         return;
     }
     callback();

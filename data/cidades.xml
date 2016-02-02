@@ -170,6 +170,11 @@
         <ibge>2408102</ibge>
         <uf>RN</uf>
     </cidade>
+	<cidade>
+		<nome>Navegantes</nome>
+		<ibge>4211306</ibge>
+		<uf>SC</uf>
+	</cidade>
     <cidade>
         <nome>Pelotas</nome>
         <ibge>4314407</ibge>

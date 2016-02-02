@@ -47,7 +47,7 @@
                     <fieldset>
 						<h2 role="legend">Buscar passagens aéreas</h2>
 
-                        <div class="form-group">
+                        <div class="form-group" style="display: none;">
                             <label class="radio-inline" for="tipo-ida"><input type="radio" name="tipo" id="tipo-ida" value="1">Só ida</label>
                             <label class="radio-inline" for="tipo-ida-volta"><input type="radio" name="tipo" id="tipo-ida-volta" value="2" checked>Ida e volta</label>    
                         </div>
@@ -66,17 +66,24 @@
                         </div>
                         <div class="form-group">
                             <label for="datepicker">Datas</label>
-                            <div class="input-daterange input-group" id="datepicker">
+                            <div class="input-group date">
+                                <input type="text" placeholder="dd/mm/yyyy" class="form-control" id="datepicker" required name="ida" id="ida">
+                                <span class="input-group-addon">
+                                    <i class="glyphicon glyphicon-th"></i>
+                                </span>
+                            </div>
+                            
+                            <!--<div class="input-daterange input-group" id="datepicker">
                                 <span class="input-group-addon">Saída:</span>
                                 <input type="text" placeholder="dd/mm/yyyy" class="form-control" required name="ida" id="ida" />
                                 <span class="input-group-addon">Chegada:</span>
                                 <input type="text" placeholder="dd/mm/yyyy" class="form-control" name="volta" id="volta"/>
-                            </div>
+                            </div>-->
                         </div>
                         
                         <div class="form-group">
                             <label for="pessoas">Passageiros</label>
-                            <input type="number" class="form-control" name="pessoas" id="pessoas" min="1" max="8" value="1" required>
+                            <input type="number" class="form-control" name="pessoas" id="pessoas" min="1" value="1" required>
                         </div>
                         
                         <button class="btn btn-primary btn-block" type="submit">Buscar</button>

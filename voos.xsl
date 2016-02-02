@@ -26,6 +26,7 @@
             </h1>
         </div>
 		<xsl:for-each select="escala">		
+            <xsl:sort select="sum(.//voo/preco)" order="ascending"></xsl:sort>
             <xsl:sort select="@escalas" order="ascending"></xsl:sort>	
 			<!--<div class="panel panel-primary">-->
 			<div>
@@ -89,7 +90,8 @@
 						<div class="col-xs-3">
 							<div class="panel panel-default">
 								<div class="panel-body text-right">
-									<span class="text-success" style="font-size: 1.5em">R$ <xsl:value-of select="format-number(sum(.//voo/preco), '#,00', 'euro')"/></span>
+									<span class="text-success" style="font-size: 1.5em">R$ <xsl:value-of select="format-number(sum(.//voo/preco), '#,00', 'euro')"/></span><br/>
+									<span class="text-danger" style="font-size: 0.8em">Taxas e encargos: R$ <xsl:value-of select="format-number(@taxas, '#,00', 'euro')"/></span>
 								</div>
 								<div class="panel-footer text-danger">
                                 <xsl:for-each select=".//voo/passagens">

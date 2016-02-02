@@ -53,6 +53,14 @@ function busca_aeroporto(cidade){
     return aeroportos;
 }
 
+function busca_taxa(sigla) {
+    var taxa;
+    (new XMLSelect(xmlaeroporto, '//aeroporto[sigla="'+sigla+'"]/taxa/text()')).run(function(t) {
+        taxa = t.data || '0.0';
+    });
+    return parseFloat(taxa);
+}
+
 function nome_cidade(ibge) {
     var cid;
     (new XMLSelect(xmlcidade, '//cidade[ibge="'+ibge+'"]')).run(function(c) {
@@ -93,13 +101,14 @@ function array_voos_to_xml_voos(escalas) {
         var escala = result.createElement('escala');
         escala.setAttribute('escalas', (esc.voos.length-1)+'');
         escala.setAttribute('companhia', esc.cia);
-        esc.voos.forEach(function(v){
-            var el = result.createElement('operadora');
-            el.textContent = v.cia;
-            v.appendChild(el);
+        var aeroportos = [esc.voos[0].querySelector('origem').textContent];
+        esc.voos.forEach(function(it){
+            var v = it.cloneNode(true);
             
             var o = nomes(v.querySelector('origem').textContent);
             var d = nomes(v.querySelector('destino').textContent);
+            
+            aeroportos.push(v.querySelector('destino').textContent);
             
             v.appendChild(new_node('aeroportoorigem', o.aeroporto));
             v.appendChild(new_node('cidadeorigem', o.cidade));
@@ -108,6 +117,11 @@ function array_voos_to_xml_voos(escalas) {
             
             escala.appendChild(v);     
         });
+        var taxas = 0.0;
+        aeroportos.forEach(function(a) {
+            taxas+= busca_taxa(a);
+        });
+        escala.setAttribute('taxas', taxas+'');
         
         var attr = ['origem', 'aeroportoorigem', 'cidadeorigem'];
         attr.forEach(function(a) {

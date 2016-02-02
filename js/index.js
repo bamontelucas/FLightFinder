@@ -153,7 +153,7 @@ function selecionar(obj){
 	$("[name='"+resultInput.id+"']").val(cod);	
 }
 
-$("[name=tipo]").change(function(){
+/*$("[name=tipo]").change(function(){
 	if (this.value == 1){
 		$("#destino").prop("disabled",true);
 		$("#volta").prop("disabled",true);
@@ -167,7 +167,7 @@ $("[name=tipo]").change(function(){
 		$("#volta").prop("required",false);	
 	}
 
-});
+});*/
 
 function validar(){
 	if ($("[name='origem']").val() == ""){
@@ -185,8 +185,8 @@ function validar(){
 	if (($("[name='destino']").val() == "") && ($("[name='destino']").val() == "1")){
 		return false;
 	}
-	if (($("#volta").val() == "") && ($("[name='destino']").val() == "1")){
+	/*if (($("#volta").val() == "") && ($("[name='destino']").val() == "1")){
 		return false;
-	}	
+	}	*/
 	return true;
 }

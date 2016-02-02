@@ -204,6 +204,12 @@
         <cidade>2408102</cidade>
         <taxa>11.88</taxa>
     </aeroporto>
+	<aeroporto>
+        <sigla>NVT</sigla>
+        <nome>Aeroporto Ministro Victor Konder</nome>
+        <cidade>4211306</cidade>
+        <taxa>14.82</taxa>
+    </aeroporto>
     <aeroporto>
         <sigla>PET</sigla>
         <nome>Aeroporto de Pelotas</nome>
